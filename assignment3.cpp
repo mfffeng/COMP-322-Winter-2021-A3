@@ -92,7 +92,7 @@ class Deck{
             }
         }
         void Shuffle(){
-            // A weird stuff for seeding the random engine with the current time in milliseconds to ensure a different shuffle scheme
+            // Some weird stuff for seeding the random engine with the current time in milliseconds to ensure a different shuffle scheme
             // every time Shuffle() is called.
             // Also I have to change the first letter to upper case, or it will collide with the shuffle() function I used below.
             mt19937 e{static_cast<unsigned>(chrono::system_clock::now().time_since_epoch().count())};
